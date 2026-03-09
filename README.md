@@ -13,7 +13,7 @@ An AI assistant for Marketing + Media Alliance staff, built on [Claude Code](htt
 Claude Code is the platform that powers MAVEN. If you haven't installed it yet:
 
 **Mac:**
-1. Open **Terminal** (search "Terminal" in Spotlight, or find it in Applications > Utilities)
+1. Open **Terminal** (press Cmd+Space, type "Terminal", press Enter)
 2. Paste this command and press Enter:
 ```
 curl -fsSL https://claude.ai/install.sh | bash
@@ -28,7 +28,7 @@ irm https://claude.ai/install.ps1 | iex
 ```
 3. Close and reopen PowerShell
 
-Claude Code requires a Claude subscription (Team, Pro, or Max). MMA staff have a Team subscription — use your MMA email to sign in when prompted.
+Claude Code requires a Claude subscription (Team, Pro, or Max). MMA staff are on a Team plan — sign in with your MMA email when prompted. If you haven't been added to the Team plan yet, Slack Alec Foster to get set up.
 
 ### Step 2: Download MAVEN
 
@@ -62,57 +62,84 @@ That's it. Type `/maven` inside to get your first daily briefing.
 
 ## Daily Usage
 
-**Start your day:**
+### Starting MAVEN
+
+Every time you want to use MAVEN, open your terminal and type:
 ```
 maven
 ```
-Then type `/maven` for a briefing of your priorities, calendar, and tasks.
 
-**Work naturally** — just talk:
-- "Draft an email to the membership team about Q2 renewals"
-- "What's on my calendar today?"
-- "Create an Asana task for the board deck, due Friday"
-- "Summarize what happened in #general yesterday"
-- "Prep me for my 2pm call with Hassan"
+This opens Claude Code in your MAVEN folder. You'll see a text prompt where you can type messages to MAVEN.
 
-**Save your progress:** Type `/update`
+> **What's the difference between `maven` and `/maven`?**
+> - `maven` is what you type in your **terminal** to launch Claude Code
+> - `/maven` is what you type **inside Claude Code** to get your daily briefing
+>
+> Think of it like: `maven` opens the app, `/maven` starts your workday.
 
-**End your day:** Type `/end`
+### Your typical day
 
-MAVEN does not auto-save. Use `/update` periodically and `/end` when you're done.
+1. **Open your terminal** and type `maven` to launch MAVEN
+2. **Type `/maven`** to get a briefing of your priorities, calendar, and tasks
+3. **Work naturally** — just type what you need in plain English:
+   - "Draft an email to the membership team about Q2 renewals"
+   - "What's on my calendar today?"
+   - "Create an Asana task for the board deck, due Friday"
+   - "Summarize what happened in #general yesterday"
+   - "Prep me for my 2pm call with Hassan"
+4. **Type `/update`** periodically to save your progress
+5. **Type `/end`** when you're done for the day
+
+MAVEN does not auto-save. If you close the terminal without running `/end`, your session won't be saved for next time.
 
 ---
 
 ## What MAVEN Can Do
 
-### Writing & Content
-- **Email drafting** — audience-aware (internal, members, board, external) with MMA formatting
-- **Content creation** — blog posts, newsletters, thought leadership with MMA data points
-- **Social posts** — LinkedIn-optimized with engagement templates
-- **Event promotion** — POSSIBLE, CMO Summit, SMARTIES, CATS, AIPOSSIBLE
+MAVEN comes pre-loaded with MMA's org context — teams, programs, labs, events, brand guidelines — and 14 purpose-built skills. These skills work together, so you're not limited to one thing at a time. You can ask MAVEN to do complex, multi-step work that would normally take hours.
+
+### Writing & Marketing
+- **Emails** — audience-aware drafting (internal, members, board, external) with MMA formatting
+- **Content** — blog posts, newsletters, thought leadership with MMA data points baked in
+- **Social media** — LinkedIn-optimized posts with engagement, event, and research templates
+- **Event promotion** — materials for POSSIBLE, CMO Summit, SMARTIES, CATS, AIPOSSIBLE
 - **Member communications** — segment-aware onboarding, renewals, announcements
-- **Case studies** — from lab results and member outcomes
+- **Case studies** — from lab results and member outcomes, with brand-approved formatting
 
 ### Research & Analysis
-- **Web research** — with MMA context and lens
-- **Lab summaries** — Future Lab results in executive, member, marketing, or detailed format
-- **Research briefs** — think tank findings (MATT, MOSTT, ALTT, DATT) for any audience
-- **Meeting prep** — attendee info, past interactions, talking points
+- **Web research** — searches with MMA context so results are relevant to our work
+- **Lab summaries** — Future Lab results formatted for executives, members, marketing, or deep-dive
+- **Research briefs** — think tank findings (MATT, MOSTT, ALTT, DATT) tailored to any audience
+- **Meeting prep** — pulls attendee info, past interactions, and talking points before your call
 
-### Operations
+### Operations & Workflow
 - **Meeting follow-ups** — segmented post-meeting emails with proper attribution
-- **Asana tasks** — create, update, manage with MMA naming conventions
-- **Slack summaries** — channel activity digests with key decisions and action items
+- **Asana tasks** — create, update, and manage with MMA naming conventions
+- **Slack summaries** — channel activity digests highlighting decisions and action items
 - **SharePoint navigation** — find documents across 17+ MMA sites
+- **Data consolidation** — pull from multiple trackers, combine spreadsheets, summarize engagement data across systems
+
+### Complex Workflows
+
+MAVEN's real power is combining skills and tools in a single conversation. For example:
+
+- "Pull the CAP lab results, write an executive summary, draft a member email about it, and create an Asana task to send it by Friday"
+- "Check my calendar for next week, find all the attendees on LinkedIn, and prep briefing docs for each meeting"
+- "Summarize the last month of #membership-team Slack messages, cross-reference with the renewal tracker, and flag any at-risk accounts"
+- "Take this meeting transcript, write follow-ups for each attendee segment, draft a LinkedIn post about the key takeaway, and update the Asana project"
+
+Work that used to take hours of switching between tools, cross-referencing trackers, and manual formatting — MAVEN handles it in one conversation.
 
 ### Memory & Continuity
-- **Session management** — pick up where you left off
+- **Session management** — pick up where you left off, even days later
 - **Goal tracking** — monitor progress across sessions
 - **Daily briefings** — priorities, deadlines, calendar, alerts
 
 ---
 
 ## Commands
+
+Type these **inside MAVEN** (inside Claude Code, not in the regular terminal):
 
 | Command | What It Does |
 |---------|--------------|
@@ -128,6 +155,8 @@ MAVEN does not auto-save. Use `/update` periodically and `/end` when you're done
 
 When new skills or MMA context updates are available:
 
+1. Open your terminal
+2. Run these two commands:
 ```
 cd ~/maven
 git pull
