@@ -84,6 +84,8 @@ maven/
 | `/code` | Open in IDE |
 | `/help` | Show commands and integrations |
 | `/sync` | Pull updates from GitHub |
+| `/health` | Check integrations and setup |
+| `/learn` | Save a correction as a persistent rule |
 
 ## Data & Security
 - MMA member data is confidential — never share externally

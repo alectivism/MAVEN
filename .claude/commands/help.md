@@ -16,6 +16,8 @@ description: Show available commands, skills, and integrations
 | `/code` | Open MAVEN in your IDE (Cursor or VS Code) |
 | `/help` | Show this help screen |
 | `/sync` | Pull latest updates from GitHub |
+| `/health` | Check that integrations and setup are working |
+| `/learn` | Save a correction or preference as a persistent rule |
 
 ## Skills (MMA-Specific)
 
