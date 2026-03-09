@@ -193,7 +193,7 @@ Your personal files (profile, goals, session logs) are never overwritten — onl
 
 - Type `/help` inside MAVEN
 - Ask MAVEN: "What can you do?" or "How do I connect Salesforce?"
-- Reach out on **#ai-upskilling** in Slack
+- Reach out on **#ai-af-agents** in Slack
 
 ---
 
