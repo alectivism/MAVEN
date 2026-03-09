@@ -197,4 +197,4 @@ Your personal files (profile, goals, session logs) are never overwritten — onl
 
 ---
 
-*Built on [MARVIN template](https://github.com/SterlingChin/marvin-template) by Sterling Chin. MMA customization by Alec Foster.*
+*Inspired by [MARVIN template](https://github.com/SterlingChin/marvin-template) by Sterling Chin. MMA customization + custom skills by Alec Foster.*
