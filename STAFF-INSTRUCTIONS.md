@@ -1,4 +1,4 @@
-# Getting Started with MMA MAVEN
+# Getting Started with MAVEN
 
 **MAVEN** = MMA's Agentic Virtual Executive Navigator
 
@@ -8,8 +8,8 @@ Your AI assistant that knows MMA, connects to your tools, and remembers your wor
 
 ## What You Need
 
-- **A computer** (Mac, Windows, or Linux)
-- **A Claude Pro or Max subscription** — [claude.ai/pricing](https://claude.ai/pricing)
+- **A Mac or Windows computer**
+- **Your MMA Claude Team subscription** (sign in with your MMA email)
 - **Your MMA credentials** for Outlook, Slack, and Asana
 
 ---
@@ -18,129 +18,81 @@ Your AI assistant that knows MMA, connects to your tools, and remembers your wor
 
 ### Step 1: Install Claude Code
 
-**Mac / Linux:**
+**Mac:**
+1. Open **Terminal** (press Cmd+Space, type "Terminal", press Enter)
+2. Paste this and press Enter:
 ```
 curl -fsSL https://claude.ai/install.sh | bash
 ```
+3. Close and reopen Terminal
 
-**Windows (PowerShell):**
+**Windows:**
+1. Open **PowerShell** (search "PowerShell" in the Start menu)
+2. Paste this and press Enter:
 ```
 irm https://claude.ai/install.ps1 | iex
 ```
+3. Close and reopen PowerShell
 
-Close and reopen your terminal, then verify:
-```
-claude --version
-```
+### Step 2: Download MAVEN
 
-### Step 2: Install Git (if you don't have it)
-
-Check if you already have it:
-```
-git --version
-```
-
-If not installed:
-- **Mac:** Install Xcode Command Line Tools: `xcode-select --install`
-- **Windows:** Download from [git-scm.com](https://git-scm.com)
-
-### Step 3: Clone MAVEN
-
+Paste this into your terminal and press Enter:
 ```
 git clone https://github.com/alectivism/MAVEN.git ~/maven
-cd ~/maven
 ```
 
-### Step 4: Run Setup
+> **Mac users:** If you see a popup asking to install "Command Line Developer Tools," click **Install**, wait for it to finish, then run the command again.
+
+### Step 3: Run Setup
 
 ```
-./.marvin/setup.sh
+cd ~/maven && ./.marvin/setup.sh
 ```
 
-The setup wizard will walk you through:
-1. Your name, role, and department
-2. Communication style preferences
-3. Tool connections (MS365, Slack, Asana)
-4. Optional integrations
+The wizard walks you through your profile and tool connections.
 
-### Step 5: Start MAVEN
+### Step 4: Start MAVEN
 
 ```
 maven
 ```
 
-Type `/maven` to get your first briefing.
+Type `/maven` to get your first daily briefing.
 
 ---
 
 ## Daily Usage
 
-### Start Your Day
-```
-maven
-```
-Then type `/maven` for a briefing of your priorities, calendar, and tasks.
-
-### Work Naturally
-Just talk to MAVEN:
-- "Draft an email to the membership team about Q2 renewals"
-- "What's on my calendar today?"
-- "Create an Asana task for the board deck, due Friday"
-- "Summarize what happened in #general yesterday"
-- "Prep me for my 2pm call with Hassan"
-
-### Save Your Progress
-```
-/update
-```
-
-### End Your Day
-```
-/end
-```
-
-MAVEN does not auto-save. Use `/update` periodically and `/end` when done.
+| What | How |
+|------|-----|
+| Start your day | Type `maven` in terminal, then `/maven` for a briefing |
+| Ask for anything | Just talk: "Draft an email to...", "What's on my calendar?" |
+| Save progress | Type `/update` |
+| End your day | Type `/end` |
+| Get help | Type `/help` |
 
 ---
 
 ## Getting Updates
 
-When the team pushes new skills or updated MMA context:
-
+When new features are available:
 ```
 cd ~/maven
 git pull
 ```
 
-Your personal files are never overwritten — only shared skills and MMA context update.
-
----
-
-## Commands
-
-| Command | What It Does |
-|---------|--------------|
-| `/maven` | Start with a briefing |
-| `/end` | Save and end session |
-| `/update` | Quick save |
-| `/report` | Weekly summary |
-| `/help` | Show all commands and skills |
+Your personal files are never overwritten.
 
 ---
 
 ## Troubleshooting
 
-**"claude: command not found"**
-Close and reopen your terminal after installing Claude Code.
-
-**"maven: command not found"**
-Re-run setup: `./.marvin/setup.sh` — it creates the shell alias.
-
-**Can't connect to MS365/Slack/Asana**
-Ask MAVEN: "Help me set up Microsoft 365" — it will walk you through the MCP setup.
-
-**Git pull shows conflicts**
-Your personal files are gitignored, so this shouldn't happen. If it does, ask in #ai-upskilling.
+| Problem | Fix |
+|---------|-----|
+| "claude: command not found" | Close and reopen your terminal |
+| "maven: command not found" | Run `cd ~/maven && ./.marvin/setup.sh` again |
+| Popup about "Developer Tools" | Click Install, wait, then try again |
+| Can't connect to Outlook/Slack | Ask MAVEN: "Help me set up Microsoft 365" |
 
 ---
 
@@ -148,4 +100,4 @@ Your personal files are gitignored, so this shouldn't happen. If it does, ask in
 
 - Type `/help` inside MAVEN
 - Ask on **#ai-upskilling** in Slack
-- Contact Alec Foster for technical issues
+- Contact Alec Foster
