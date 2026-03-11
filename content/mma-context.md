@@ -36,7 +36,7 @@ Updated by: Alec Foster
 | Department | Key People | Focus |
 |------------|-----------|-------|
 | Leadership | Greg Stuart (CEO) | Strategy. CEO Admin email: ceo.admin@mmaglobal.com. GS Worklist project in Asana for Greg's items |
-| Office of CEO & Board Operations | Angela Gray (VP, Ops & Board Strategy), Jade Bentham (Board Manager), Natalie Mauldin-Lovorn (Executive Admin), TBH (R&I Program Manager) | CEO support, board operations, strategic direction, cross-functional coordination. Schedule/comms via ceo.admin@mmaglobal.com |
+| Office of CEO & Board Operations | Angela Gray (VP, Chief of Staff, Ops & Board Strategy), Jade Bentham (Board Manager), Natalie Mauldin-Lovorn (Executive Admin), TBH (R&I Program Manager) | CEO support, board operations, strategic direction, cross-functional coordination. Schedule/comms via ceo.admin@mmaglobal.com |
 | Internal AI Acceleration | Alec Foster, Chief AI Architect & Responsible AI Lead | Staff upskilling, tool onboarding, AI KPIs, agents |
 | Think Tanks / Labs / Communities | See Think Tanks section below | MATT, ALTT, MOSTT, DATT |
 | ALTT | Hassan Khater (Co AI Program Director) + Alec Foster (Co AI Program Director) + Rex Briggs (AI SME) | AI initiatives, Future Labs (CAP, A3, ACE, SIFT, AURA), RAIL, ALC community |
@@ -44,8 +44,8 @@ Updated by: Alec Foster
 | MOSTT | Michael Pettitte (MOSTT Program Director), Professors: Dr. Omar, Dr. Neil, Dr. Sundar, Shubu | Marketing org structure research |
 | DATT | TBH (DATT Program Director) | Data & CX research (program director to be hired) |
 | Research & Insights | Vas Bakopoulos (SVP, Research & Insights), Kayte Hamilton (Research & Insights Lead), Leah Penland (Research Project Manager) | Reports, Labs, think tank support, frameworks |
-| Membership | Stephen Wellman (VP, Membership), Amanda Hyland (AVP, Membership), Dan Whiting (Membership Engagement), Aaron Sultan (Membership Enablement), Shauna Peck (Membership Coordinator) | Onboarding, renewals, engagement, enablement |
-| Marketing | TBH (VP, Marketing), TBH (Communications), TBH (Content/Digital Marketing), Jason Chase (Website Manager), Reach Marketing (external agency) | Content, newsletters, comms, website, brand (leadership TBH) |
+| Membership | Stephen Wellman (VP, Membership), Amanda Hyland (AVP, Membership), Dan Whiting (Membership Engagement), Aaron Sultan (Membership Enablement, Salesforce admin), Shauna Peck (Membership Coordinator) | Onboarding, renewals, engagement, enablement |
+| Marketing | TBH (VP, Marketing), TBH (Communications), TBH (Content/Digital Marketing), Jason Chase (Website Manager & Design), Reach Marketing (external agency), Erin Disney (Events/PMO) | Content, newsletters, comms, website, design, events (leadership TBH) |
 | Talent | Adam Raines (VP, Talent) | HR, talent management |
 | Sales & Revenue | Andrew Somer (SVP, Sales — Mem/Events), Kevin Granath (VP, Sales — Mem Board), TBD (Sales & Membership) | Prospecting, recruitment, event sponsorship sales |
 | Finance | Matt Craig (CFO), Betsy Munson, Theresa Pizzo, Benji Albea | MMA Finances |
