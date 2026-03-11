@@ -1,6 +1,6 @@
 # MMA Shared Context
 
-Last updated: 2026-02-25
+Last updated: 2026-03-11
 Updated by: Alec Foster
 
 > This file provides organizational context for all MMA MAVEN instances.
@@ -31,29 +31,27 @@ Updated by: Alec Foster
 
 ---
 
-## Teams & Key Staff
+## Teams & Key Staff (March 2026 Org Chart)
 
 | Department | Key People | Focus |
 |------------|-----------|-------|
 | Leadership | Greg Stuart (CEO) | Strategy. CEO Admin email: ceo.admin@mmaglobal.com. GS Worklist project in Asana for Greg's items |
-| Chief of Staff | Angela Gray (VP, Chief of Staff & VP Operations) | Guards Greg's time, strategic direction, process design, cross-functional coordination |
-| CEO Executive Assistants | Jade Bentham, Natalie Mauldin-Lovorn | Manage Greg's schedule/comms via ceo.admin@mmaglobal.com |
+| Office of CEO & Board Operations | Angela Gray (VP, Ops & Board Strategy), Jade Bentham (Board Manager), Natalie Mauldin-Lovorn (Executive Admin), TBH (R&I Program Manager) | CEO support, board operations, strategic direction, cross-functional coordination. Schedule/comms via ceo.admin@mmaglobal.com |
 | Internal AI Acceleration | Alec Foster, Chief AI Architect & Responsible AI Lead | Staff upskilling, tool onboarding, AI KPIs, agents |
-| ALTT | Hassan Khater (VP Strategic Initiatives) + Alec Foster (AI SME -- Responsible AI, agents) + Rex Briggs (Research + Future Labs strategy) + Leah Penland & Natalie (Program ops, comms, events) | AI initiatives, Future Labs (CAP, A3, ACE, SIFT, AURA), RAIL, ALC community |
-| DATT | Denise Champion + Joel Rubinson | Research, Movable Middles Growth Framework experimentation |
-| MOSTT | Michael Pettiette | Marketing org structure research |
-| Research | Vassilis (Vas) Bakopoulos (SVP Head of Industry Research), Leah Penland (Strategic Initiatives & Research PM) | Reports, Labs, think tank support, frameworks |
-| Membership | Stephen Wellman, Amanda Hyland, Shauna Peck | Onboarding, renewals, engagement |
-| Sales | Kevin Granath, Andrew Somer | Prospecting, recruitment, event sponsorship sales |
-| Marketing/Content | Dan Whiting | Content, newsletters, comms |
-| CRM & Automation | Bulent Doruker (CRM, Automation & Integrated Marketing Director) | Data hygiene, segmentation, workflow automation, marketing systems |
-| Events/PMO | Jade Bentham (also CEO EA) | Events, project coordination |
-| Design/Web | Jason Chase | Website, brand |
-| Finance | Matt Craig (SVP, Head of Finance), Theresa Pizzo (Accounts Payable) | MMA Finances |
-| Sales Admin | Aaron Sultan | Salesforce admin |
-| APAC | Rohit Dadwal (CEO, also Global Head of SMARTIES WW, Board Member) | APAC ops |
-| LATAM | Fabiano Destri Lobo (CEO), Thais Schauff (VP Operations) | LATAM ops, membership growth, events |
-| EMEA | Melis Ertem (CEO) | Europe, Middle East, Africa (including DACH) |
+| Think Tanks / Labs / Communities | See Think Tanks section below | MATT, ALTT, MOSTT, DATT |
+| ALTT | Hassan Khater (Co AI Program Director) + Alec Foster (Co AI Program Director) + Rex Briggs (AI SME) | AI initiatives, Future Labs (CAP, A3, ACE, SIFT, AURA), RAIL, ALC community |
+| MATT | Denise Champion (MATT Program Director), Joel Rubinson (MATT SME) | Measurement and attribution research |
+| MOSTT | Michael Pettitte (MOSTT Program Director), Professors: Dr. Omar, Dr. Neil, Dr. Sundar, Shubu | Marketing org structure research |
+| DATT | TBH (DATT Program Director) | Data & CX research (program director to be hired) |
+| Research & Insights | Vas Bakopoulos (SVP, Research & Insights), Kayte Hamilton (Research & Insights Lead), Leah Penland (Research Project Manager) | Reports, Labs, think tank support, frameworks |
+| Membership | Stephen Wellman (VP, Membership), Amanda Hyland (AVP, Membership), Dan Whiting (Membership Engagement), Aaron Sultan (Membership Enablement), Shauna Peck (Membership Coordinator) | Onboarding, renewals, engagement, enablement |
+| Marketing | TBH (VP, Marketing), TBH (Communications), TBH (Content/Digital Marketing), Jason Chase (Website Manager), Reach Marketing (external agency) | Content, newsletters, comms, website, brand (leadership TBH) |
+| Talent | Adam Raines (VP, Talent) | HR, talent management |
+| Sales & Revenue | Andrew Somer (SVP, Sales — Mem/Events), Kevin Granath (VP, Sales — Mem Board), TBD (Sales & Membership) | Prospecting, recruitment, event sponsorship sales |
+| Finance | Matt Craig (CFO), Betsy Munson, Theresa Pizzo, Benji Albea | MMA Finances |
+| APAC | Rohit Dadwal (CEO, also Global Head of SMARTIES WW, Board Member) — ~30 staff | APAC ops |
+| MEA | Melis Ertem (CEO) — ~19 staff; EU-DACH sub-team (~4 staff) | Middle East, Africa, Europe (including DACH) |
+| LATAM | Fabiano Destri Lobo (CEO) — ~13 staff | LATAM ops, membership growth, events |
 
 ---
 
@@ -181,7 +179,8 @@ Updated by: Alec Foster
 **Automation & AI:**
 - Zapier -- cross-app workflows
 - Claude (transitioning from ChatGPT Teams) -- AI assistant
-- Fireflies -- meeting transcription
+- Granola -- meeting transcription (preferred, replacing Fireflies)
+- Fireflies -- meeting transcription (legacy, still connected)
 
 **Sales-specific:** Pardot (email automation), Outreach (sequences)
 

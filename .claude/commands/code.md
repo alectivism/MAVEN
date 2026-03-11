@@ -1,10 +1,10 @@
 ---
-description: Open MAVEN in your IDE (Cursor, VS Code, etc.)
+description: Open MARVIN in your IDE (Cursor, VS Code, etc.)
 ---
 
 # /code - Open in IDE
 
-Open the MAVEN directory in your preferred IDE.
+Open the MARVIN directory in your preferred IDE.
 
 ## Instructions
 

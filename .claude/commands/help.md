@@ -2,26 +2,24 @@
 description: Show available commands, skills, and integrations
 ---
 
-# MAVEN Help
+# MARVIN Help
 
 ## Commands
 
 | Command | What It Does |
 |---------|-------------|
-| `/maven` | Start your session — loads context, gives you a briefing |
+| `/marvin` | Start your session — loads context, gives you a briefing |
 | `/end` | End session — saves everything to your session log and state |
 | `/update` | Quick save — checkpoint without ending |
 | `/report` | Generate a weekly summary of your work |
 | `/commit` | Review and commit git changes |
-| `/code` | Open MAVEN in your IDE (Cursor or VS Code) |
+| `/code` | Open MARVIN in your IDE (Cursor or VS Code) |
 | `/help` | Show this help screen |
-| `/sync` | Pull latest updates from GitHub |
-| `/health` | Check that integrations and setup are working |
-| `/learn` | Save a correction or preference as a persistent rule |
+| `/sync` | Sync MARVIN skills and rules to the MAVEN template |
 
 ## Skills (MMA-Specific)
 
-MAVEN has specialized skills that activate automatically or can be invoked directly. Here's what's available:
+MARVIN has specialized skills that activate automatically or can be invoked directly. Here's what's available:
 
 ### Writing & Content
 | Skill | What It Does | Try Saying |
@@ -62,7 +60,7 @@ MAVEN has specialized skills that activate automatically or can be invoked direc
 
 ## Integrations
 
-MAVEN can connect to these tools (run the setup script to configure):
+MARVIN can connect to these tools (run the setup script to configure):
 
 | Integration | What You Can Do |
 |-------------|----------------|
@@ -73,7 +71,7 @@ MAVEN can connect to these tools (run the setup script to configure):
 | **Web Search** | Research any topic online |
 
 ## Tips
-- Start each day with `/maven` for a briefing
+- Start each day with `/marvin` for a briefing
 - Use `/update` frequently to save progress
 - Always end with `/end` so context carries over
 - Skills activate automatically — just describe what you need

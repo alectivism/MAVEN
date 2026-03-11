@@ -1,45 +1,130 @@
 ---
 name: commit
-description: Review git changes and create clean, well-structured commits. Use when the user says "/commit", "commit changes", "save to git", or wants to commit their work.
-allowed-tools:
-  - Bash(git *)
-  - Read
+description: |
+  Review changes and create clean git commits. Use when user types /commit or asks to commit changes. Creates well-structured commits with proper messages.
+license: MIT
+compatibility: marvin
+metadata:
+  marvin-category: work
+  user-invocable: true
+  slash-command: /commit
+  model: default
+  proactive: false
 ---
 
-# Git Commit Workflow
+# Commit Skill
+
+Review changes and create clean, well-structured git commits.
+
+## When to Use
+
+- User types `/commit`
+- User asks to "commit changes" or "save to git"
+- After completing a piece of work
 
 ## Process
 
-### 1. Review Changes
-Run `git status` and `git diff` to see:
-- Staged changes
-- Unstaged modifications
-- Untracked files
+### Step 1: Check Current Status
+```bash
+git status --short
+git diff --stat
+```
 
-### 2. Group Changes
-Identify logical groups:
-- **feat:** New capabilities or features
-- **fix:** Bug fixes
-- **docs:** Documentation changes
-- **chore:** Maintenance, config changes
-- **refactor:** Code restructuring
-- **content:** New content files
-- **session:** Session logs and state updates
+Review what's changed:
+- New files
+- Modified files
+- Deleted files
 
-### 3. Stage & Commit
-For each logical group:
-- Stage the relevant files (`git add` specific files, not `git add .`)
-- Write a clear commit message:
-  - First line: `type: brief description` (under 72 chars)
-  - Blank line
-  - Body: context if needed
+### Step 2: Review Changes
+```bash
+git diff
+```
 
-### 4. Confirm
-Show the user what will be committed before executing.
-Never push unless explicitly asked.
+Understand what changed and why. Group related changes.
 
-## Guidelines
-- Never commit `.env` or credentials files
-- Don't commit large binary files without asking
-- Prefer multiple small commits over one large commit
-- Session logs and state files can be grouped as one commit
+### Step 3: Check Recent History
+```bash
+git log --oneline -5
+```
+
+Match the repository's commit style.
+
+### Step 4: Create Logical Commits
+
+Group files by type and create separate commits:
+
+| Category | Files | Commit Type |
+|----------|-------|-------------|
+| Features | New functionality | `feat:` |
+| Bug fixes | Fixes | `fix:` |
+| Documentation | `*.md`, docs | `docs:` |
+| Configuration | Config files | `chore:` |
+| State/Sessions | `state/`, `sessions/` | `chore:` |
+
+### Step 5: Stage and Commit
+
+For each group:
+```bash
+git add <specific files>
+git commit -m "$(cat <<'EOF'
+<type>: <short description>
+
+<optional longer description>
+
+Co-Authored-By: Claude <noreply@anthropic.com>
+EOF
+)"
+```
+
+### Step 6: Push (if requested)
+```bash
+git push
+```
+
+## Commit Message Guidelines
+
+**Format:**
+```
+<type>: <description>
+
+[optional body]
+
+Co-Authored-By: Claude <noreply@anthropic.com>
+```
+
+**Types:**
+- `feat:` — New feature
+- `fix:` — Bug fix
+- `docs:` — Documentation
+- `chore:` — Maintenance, config, state updates
+- `refactor:` — Code restructuring
+- `test:` — Tests
+
+**Good examples:**
+- `feat: add email notification system`
+- `fix: resolve login timeout issue`
+- `docs: update API documentation`
+- `chore: session log and state update`
+
+**Bad examples:**
+- `update` (too vague)
+- `fixed stuff` (not descriptive)
+- `WIP` (don't commit work in progress)
+
+## Output Format
+
+```
+**Changes:**
+- {file 1}: {what changed}
+- {file 2}: {what changed}
+
+**Commits created:**
+1. `<type>: <message>`
+2. `<type>: <message>`
+
+{Pushed to origin/main | Ready to push}
+```
+
+---
+
+*Skill created: 2026-01-22*

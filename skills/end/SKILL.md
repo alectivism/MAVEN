@@ -1,63 +1,130 @@
 ---
 name: end
-description: End a MAVEN session — summarize the conversation, update session log and state files, optionally commit changes. Use when the user says "/end", "end session", "wrap up", "I'm done", "save and quit", or indicates they're ending their work session.
-allowed-tools:
-  - Read
-  - Edit
-  - Write
-  - Bash(git *)
+description: |
+  End MARVIN session, save context, and commit changes. Use when user types /end or /quit. Creates session log, updates state, and optionally commits to git.
+license: MIT
+compatibility: marvin
+metadata:
+  marvin-category: session
+  user-invocable: true
+  slash-command: /end
+  model: default
+  proactive: false
 ---
 
-# End MAVEN Session
+# Session End Skill
 
-## Closing Sequence
+End MARVIN session with full context preservation.
 
-### 1. Summarize the Session
+## When to Use
+
+- When user types `/end` or `/quit`
+- When actually done for a while
+- When wanting a full session summary
+- When closing out the day
+
+## Inputs
+
+- Full conversation from this session
+- Current state from `state/current.md`
+- Today's date (from startup)
+
+## Process
+
+### Step 1: Summarize Session
 Review the conversation and extract:
-- **Topics covered** — what was discussed/worked on
-- **Decisions made** — any choices finalized
-- **Content shipped** — deliverables completed
-- **Open threads** — items still in progress or needing follow-up
-- **Next actions** — concrete next steps with context
+- **Topics discussed** — What did we work on?
+- **Decisions made** — What was decided?
+- **Content shipped** — Any work completed or published?
+- **Open threads** — What's unfinished or needs follow-up?
+- **Action items** — What does user need to do next?
 
-### 2. Update Session Log
-Append to `sessions/YYYY-MM-DD.md` (create if it doesn't exist):
-
+### Step 2: Update Content Log
+If any content was shipped, append to `content/log.md`:
 ```markdown
-## Session: [Time or "Afternoon"/"Morning"]
-
-### Topics
-- [Topic 1]
-- [Topic 2]
-
-### Decisions
-- [Decision and rationale]
-
-### Shipped
-- [Deliverable — link or description]
-
-### Open Threads
-- [Thread — status and next step]
-
-### Next Actions
-- [ ] [Action item with context]
+### {TODAY}
+- **[TYPE]** "Title"
+  - URL: {link if applicable}
+  - Notes: {any relevant notes}
 ```
 
-**Append, don't replace** — there may be earlier sessions logged today.
+### Step 3: Update Session Log
+Append to `sessions/{TODAY}.md`:
+```markdown
+## Session: {TIMESTAMP}
 
-### 3. Update State
-Edit `state/current.md`:
-- Add new priorities that emerged
-- Mark completed items as done
-- Update open threads
-- Add any new context or deadlines
-- Update the "Last Updated" timestamp
+### Topics
+- {topic 1}
+- {topic 2}
 
-### 4. Optional: Git Commit
-Ask if the user wants to commit changes:
-- If yes, stage state/ and sessions/ files
-- Create a commit with message: "Session log: [date] — [1-line summary]"
-- Don't push unless explicitly asked
+### Decisions
+- {decision 1}
 
-### 5. Sign Off
-Brief confirmation of what was saved.
+### Shipped
+- {content shipped, if any}
+
+### Open Threads
+- {thread 1}
+
+### Next Actions
+- {action 1}
+```
+
+If file doesn't exist, create it with header:
+```markdown
+# Session Log: {TODAY}
+```
+
+### Step 4: Update State
+Update `state/current.md` with:
+- Any new priorities or action items
+- Changed project statuses
+- New open threads
+- Removed/completed items (mark as done)
+- Update the "Last updated" timestamp
+
+Ensure nothing falls through the cracks:
+- Commitments made → add to priorities with context
+- Follow-ups needed → add to open threads
+
+### Step 5: Confirm with User
+Show brief summary:
+- What was logged
+- Any follow-ups scheduled
+- State updated
+
+### Step 6: Commit Changes (Optional)
+If user wants to commit:
+```bash
+git add -A
+git commit -m "$(cat <<'EOF'
+chore: session log and state update
+
+Co-Authored-By: Claude <noreply@anthropic.com>
+EOF
+)"
+git push
+```
+
+## Output Format
+
+```
+**Session Summary:**
+- Topics: {list}
+- Shipped: {content if any}
+- Open threads: {count}
+
+**Updated:**
+- sessions/{TODAY}.md
+- state/current.md
+
+See you next time!
+```
+
+## Notes
+- Multiple `/end` calls in one day append to the same session file
+- Keep summaries concise but complete enough for future context
+
+---
+
+*Skill created: 2026-01-22*

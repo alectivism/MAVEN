@@ -1,45 +1,76 @@
 ---
 name: update
-description: Quick checkpoint — save current progress without ending the session. Use when the user says "/update", "checkpoint", "save progress", "quick save", or wants to preserve state mid-session.
-allowed-tools:
-  - Read
-  - Edit
-  - Write
+description: |
+  Quick context checkpoint without ending session. Use when user types /update. Saves progress to session log and updates state if needed.
+license: MIT
+compatibility: marvin
+metadata:
+  marvin-category: session
+  user-invocable: true
+  slash-command: /update
+  model: default
+  proactive: false
 ---
 
-# Quick Checkpoint
+# Update Skill
+
+Lightweight save without ending the session. Use frequently to preserve context.
+
+## When to Use
+
+- User types `/update`
+- After finishing a chunk of work
+- Before switching contexts
+- Every hour or so during long sessions
+- When context is running low
 
 ## Process
 
-### 1. Assess Changes
-Review conversation since last checkpoint (or session start):
-- What was accomplished?
-- Any new priorities or decisions?
-- Any state changes worth capturing?
+### Step 1: Identify What Changed
+Quickly scan the recent conversation for:
+- Topics worked on
+- Decisions made
+- Files created/modified
+- Any state changes needed
 
-### 2. Update Session Log
-Append a checkpoint entry to `sessions/YYYY-MM-DD.md`:
+Keep it brief. No full summary needed.
 
+### Step 2: Append to Session Log
+Get today's date: `date +%Y-%m-%d`
+
+Append to `sessions/{TODAY}.md`:
 ```markdown
-### Checkpoint: [Time]
-- [What was done since last save]
-- [Key decisions or changes]
+## Update: {TIME}
+- {what was worked on, 1-3 bullets}
 ```
 
-### 3. Update State (if material changes)
-Only update `state/current.md` if there are meaningful changes:
-- New priorities added
-- Items completed
-- Deadlines changed
-- New information that affects priorities
+If file doesn't exist, create with header: `# Session Log: {TODAY}`
 
-Skip state updates for minor work — don't clutter with noise.
+### Step 3: Update State (if needed)
+Only update `state/current.md` if something actually changed:
+- New open thread
+- Completed item
+- Changed priority
+- New project/task discovered
 
-### 4. Confirm
-Brief one-line confirmation: "Checkpoint saved. [1-sentence summary]"
+Skip if nothing material changed.
 
-## Guidelines
-- This should be fast — under 30 seconds
-- Don't ask questions — just save what's there
-- Don't overwrite previous session log entries — append
-- Only update state/ if something materially changed
+### Step 4: Confirm (minimal)
+One line: "Checkpointed: {brief description}"
+
+No summary. No "next actions" list. Just confirm the save.
+
+## Output Format
+
+```
+Checkpointed: {2-5 word description of what was saved}
+```
+
+## Notes
+- This is intentionally lightweight
+- Don't use for full session wrap-up (use `/end` for that)
+- Multiple updates per day append to the same session file
+
+---
+
+*Skill created: 2026-01-22*

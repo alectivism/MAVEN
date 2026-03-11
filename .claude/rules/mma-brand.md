@@ -65,9 +65,14 @@ Always use the full name on first reference, acronym in parentheses, then acrony
 - Marketing Org Strategy Think Tank (MOSTT) → MOSTT
 - AI Leadership Think Tank (ALTT) → ALTT
 - Data & CX Think Tank (DATT) → DATT
+- Marketing Measurement Quality Score (MMQS) → MMQS
+- MarCaps Readiness Assessment (MRA) → MRA
+- Marketing Capabilities Benchmark (MCB) → MCB
+- SMARTIES Business Impact Index (BII) → BII
+- MMA Adoption Tracker (MADOPT) → MADOPT
 
 ## Official Boilerplate (2026)
-> The only trade association that unites the entire marketing ecosystem — CMOs, MarTech, AdTech, media, and marketer-supported companies — working collaboratively to architect the future of marketing while delivering growth today. Led by CMOs, the Alliance drives marketing change through peer-driven collaboration, breakthrough research, and science-backed practices.
+> The Marketing + Media Alliance (MMA) is the only trade association that unites the entire marketing ecosystem — CMOs, MarTech, AdTech, media, and marketer-supported companies — working collaboratively to architect the future of marketing while delivering growth today. Led by CMOs, the Alliance drives marketing change by tackling unanswered questions and challenging entrenched assumptions. We are unapologetically committed to science and inquiry, knowing that transformative impact only comes from constructively disrupting the status quo. Through peer-driven collaboration, the Alliance helps members aggressively adopt proven, science-backed practices. Each year, MMA Global invests millions in breakthrough research to deliver unassailable truths, actionable insights, and practical tools. By enlightening, empowering, and enabling marketers, we shape the future of marketing and propel business growth.
 
 ## Email Formatting Standards
 - Default font: Aptos 12pt (Outlook default)

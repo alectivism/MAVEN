@@ -1,47 +1,83 @@
 ---
 name: daily-briefing
-description: Generate a daily briefing covering calendar, priorities, tasks, and alerts. This is a supporting skill used by the maven session start skill. Use when asked for a "daily briefing", "morning update", "what's on my plate", or "today's agenda".
-allowed-tools:
-  - Read
-  - Grep
-  - Glob
-  - mcp__ms365__outlook_calendar_search
-  - mcp__ms365__outlook_email_search
-  - mcp__asana__asana_search_tasks
+description: |
+  Generate daily briefing with priorities, progress, and alerts. Used as part of session-start or when user asks "what's on today". Internal skill supporting the marvin skill.
+license: MIT
+compatibility: marvin
+metadata:
+  marvin-category: session
+  user-invocable: false
+  slash-command: null
+  model: default
+  proactive: false
 ---
 
-# Daily Briefing Generator
+# Daily Briefing Skill
 
-## Components
+Generate comprehensive daily briefing with priorities, progress, and alerts.
 
-### 1. Calendar Overview
-Check today's calendar (Outlook via ms365 MCP):
-- Meetings with times, attendees, and topics
-- Flag back-to-back meetings or scheduling conflicts
-- Note prep needed for important meetings
+## When to Use
 
-### 2. Priority Check
-Read `state/current.md`:
-- Top 3 active priorities
-- Any items with approaching deadlines (next 3 days)
-- Overdue items (flag prominently)
+- Part of `marvin` skill (session start)
+- User asks "what's on today" or "daily briefing"
+- Morning check-in requests
 
-### 3. Task Status
-Check Asana (if available):
-- Tasks due today or overdue
-- Tasks assigned to the user with upcoming deadlines
+## Process
 
-### 4. Open Threads
+### Step 1: Calendar Overview (if available)
+- Today's events with times
+- Tomorrow's events (preview)
+- Next 7 days: any important deadlines
+
+### Step 2: Org Context
+From `content/mma-context.md`:
+- Check current org priorities (2026 Priorities section)
+- Note any org-wide initiatives relevant to the user's role
+- Surface data/security reminders if the day's work involves sensitive topics
+
+### Step 3: Task Status
 From `state/current.md`:
-- Items waiting on others
-- Items needing follow-up
-- Stalled initiatives
+- Active priorities
+- Overdue items
+- Due today
+- Open threads needing attention
 
-### 5. Alerts
-Flag anything requiring immediate attention:
-- Overdue tasks or deadlines
-- Calendar conflicts
-- State file staleness (>3 days since update)
+### Step 4: Progress Check
+For current month from `state/goals.md`:
+- Progress against each goal
+- Days remaining in month
+
+If behind pace, flag it.
+
+### Step 5: Open Threads
+From `state/current.md`:
+- Anything waiting on follow-up
+- Stale threads (no update > 5 days)
+
+### Step 6: Proactive Suggestions
+Based on patterns:
+- "You haven't made progress on {goal} this week"
+- "Deadline for {item} is in 3 days"
+- "Monthly review coming up — want to schedule?"
 
 ## Output Format
-Keep the briefing scannable and under 30 seconds to read. Use the format defined in the maven skill.
+
+Keep concise. Structure as:
+```
+## {Day}, {Date}
+
+**Today**: {summary}
+
+**Alerts**:
+- {any urgent items}
+
+**Progress**: {goal status summary}
+
+**Focus**: {top 1-2 priorities}
+```
+
+Offer to expand any section on request.
+
+---
+
+*Skill created: 2026-01-22*

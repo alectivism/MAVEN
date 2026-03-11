@@ -1,47 +1,77 @@
 ---
 name: content-shipped
-description: Log completed deliverables and shipped content to the content log. Triggers proactively when content is finalized, published, or delivered. Use when "content shipped", "published", "sent the email", "delivered", "completed the document", or any content completion event.
-disable-model-invocation: false
-allowed-tools:
-  - Read
-  - Edit
-  - Write
+description: |
+  Log shipped content to the content log. Use when user says "I shipped", "I published", "just posted", or mentions completing content work.
+license: MIT
+compatibility: marvin
+metadata:
+  marvin-category: content
+  user-invocable: false
+  slash-command: null
+  model: default
+  proactive: true
 ---
 
-# Content Shipped Tracker
+# Content Shipped Skill
 
-## Trigger Detection
-Activate when the user:
-- Completes a document, email, or deliverable
-- Publishes content (blog, newsletter, social post)
-- Sends a communication
-- Finalizes a presentation or report
-- Ships any work product
+Log completed content to track progress against goals.
 
-## Logging Process
+## When to Use
 
-### 1. Capture Details
-- **What:** Title/description of the content
-- **Type:** Email, document, blog post, social post, presentation, report, other
-- **Audience:** Who received/will see it
-- **Date:** When it was shipped
-- **Link:** URL or file path if applicable
+Trigger phrases:
+- "I shipped..."
+- "I published..."
+- "Just posted..."
+- "Finished the..."
+- "The {article/video/post} is live"
 
-### 2. Log to Content Record
-Append to `content/log.md` (create if it doesn't exist):
+## Process
+
+### Step 1: Extract Content Details
+From the conversation, identify:
+- **Type**: Article, video, podcast, social post, etc.
+- **Title**: The content title
+- **URL**: Link if available
+- **Platform**: Where it was published
+- **Goal**: Which monthly/annual goal this counts toward
+
+### Step 2: Confirm Details
+If any details are unclear, ask:
+- "What's the title?"
+- "Where was it published?"
+- "Which goal does this count toward?"
+
+### Step 3: Log to Content File
+Append to `content/log.md`:
 
 ```markdown
-### [Date] — [Content Title]
-- **Type:** [type]
-- **Audience:** [audience]
-- **Link:** [link if applicable]
+### {DATE}
+- **[{TYPE}]** "{Title}"
+  - URL: {link}
+  - Platform: {where published}
+  - Goal: {which goal this supports}
 ```
 
-### 3. Track Against Goals
-Check `state/goals.md` for content-related goals. If this shipment advances a goal, note the progress.
+### Step 4: Update Progress
+Check `state/goals.md` for relevant monthly targets and note progress.
 
-## Guidelines
-- Log proactively when content completion is detected
-- Keep entries concise — one entry per shipment
-- Don't log drafts — only shipped/finalized content
-- Ask for confirmation before logging if the completion isn't explicit
+### Step 5: Celebrate (briefly)
+Acknowledge the shipped work:
+- "Nice! That's {X}/{Y} for the month."
+- "Logged. You're on track for {goal}."
+
+## Output Format
+
+```
+Logged: **[{TYPE}]** "{Title}"
+Progress: {X}/{Y} {content type} this month
+```
+
+## Notes
+- Be proactive about detecting shipped content in conversation
+- Don't require explicit trigger if context is clear
+- Keep celebration brief, not over-the-top
+
+---
+
+*Skill created: 2026-01-22*

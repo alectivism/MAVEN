@@ -1,8 +1,8 @@
 ---
-description: End MAVEN session - save context and state
+description: End MARVIN session - save context and state
 ---
 
-# /end - End MAVEN Session
+# /end - End MARVIN Session
 
 Wrap up the current session and save context for continuity.
 
