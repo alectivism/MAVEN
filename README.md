@@ -2,7 +2,9 @@
 
 **MAVEN** = MMA's Agentic Virtual Executive Navigator
 
-An AI assistant for Marketing + Media Alliance staff, built on [Claude Code](https://claude.ai/code). MAVEN knows MMA's org context, connects to your everyday tools (Outlook, Slack, Asana), and remembers your work across sessions.
+An AI assistant for Marketing + Media Alliance staff, built on [Claude Code](https://claude.ai/code). MAVEN adds persistent session management — daily briefings, goal tracking, and continuity across conversations — on top of the [MMA Plugin](https://github.com/alectivism/mma-plugin), which provides all MMA skills and context automatically.
+
+> **Most staff don't need to install MAVEN.** The MMA Plugin (installed org-wide by your admin) gives you all MMA skills, brand guidelines, and organizational context. Install MAVEN only if you want the "AI Chief of Staff" experience: session memory, daily briefings, and goal tracking across conversations.
 
 ---
 
@@ -94,46 +96,19 @@ MAVEN does not auto-save. If you close the terminal without running `/end`, your
 
 ---
 
-## What MAVEN Can Do
+## What MAVEN Adds (Beyond the MMA Plugin)
 
-MAVEN comes pre-loaded with MMA's org context — teams, programs, labs, events, brand guidelines — and 14 purpose-built skills. These skills work together, so you're not limited to one thing at a time. You can ask MAVEN to do complex, multi-step work that would normally take hours.
+The MMA Plugin gives every staff member 17 MMA skills, brand guidelines, and org context. MAVEN adds the "Chief of Staff" layer on top:
 
-### Writing & Marketing
-- **Emails** — audience-aware drafting (internal, members, board, external) with MMA formatting
-- **Content** — blog posts, newsletters, thought leadership with MMA data points baked in
-- **Social media** — LinkedIn-optimized posts with engagement, event, and research templates
-- **Event promotion** — materials for POSSIBLE, CMO Summit, SMARTIES, CATS, AIPOSSIBLE
-- **Member communications** — segment-aware onboarding, renewals, announcements
-- **Case studies** — from lab results and member outcomes, with brand-approved formatting
-
-### Research & Analysis
-- **Web research** — searches with MMA context so results are relevant to our work
-- **Lab summaries** — Future Lab results formatted for executives, members, marketing, or deep-dive
-- **Research briefs** — think tank findings (MATT, MOSTT, ALTT, DATT) tailored to any audience
-- **Meeting prep** — pulls attendee info, past interactions, and talking points before your call
-
-### Operations & Workflow
-- **Meeting follow-ups** — segmented post-meeting emails with proper attribution
-- **Asana tasks** — create, update, and manage with MMA naming conventions
-- **Slack summaries** — channel activity digests highlighting decisions and action items
-- **SharePoint navigation** — find documents across 17+ MMA sites
-- **Data consolidation** — pull from multiple trackers, combine spreadsheets, summarize engagement data across systems
-
-### Complex Workflows
-
-MAVEN's real power is combining skills and tools in a single conversation. For example:
-
-- "Pull the CAP lab results, write an executive summary, draft a member email about it, and create an Asana task to send it by Friday"
-- "Check my calendar for next week, find all the attendees on LinkedIn, and prep briefing docs for each meeting"
-- "Summarize the last month of #membership-team Slack messages, cross-reference with the renewal tracker, and flag any at-risk accounts"
-- "Take this meeting transcript, write follow-ups for each attendee segment, draft a LinkedIn post about the key takeaway, and update the Asana project"
-
-Work that used to take hours of switching between tools, cross-referencing trackers, and manual formatting — MAVEN handles it in one conversation.
-
-### Memory & Continuity
-- **Session management** — pick up where you left off, even days later
+### Session Management & Memory
+- **Daily briefings** (`/maven`) — priorities, deadlines, calendar, open threads
+- **Session continuity** — pick up where you left off, even days later
 - **Goal tracking** — monitor progress across sessions
-- **Daily briefings** — priorities, deadlines, calendar, alerts
+- **Checkpoints** (`/update`) — save progress mid-session
+- **Session logs** (`/end`) — automatic daily summaries
+
+### Tool Integrations
+MAVEN connects to your everyday tools during setup: Outlook, Slack, Asana, SharePoint, and optional extras (Salesforce, Fireflies, AI models). These connections are per-user and require individual authentication.
 
 ---
 
