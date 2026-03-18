@@ -415,15 +415,15 @@ echo -e "  ${BOLD}Optional Integrations:${RESET}"
 echo -e "  ${DIM}These add extra capabilities. Skip any you don't need.${RESET}\n"
 
 echo -e "  4) ${BOLD}Fireflies${RESET}     — Meeting transcription and search"
-echo -e "     ${DIM}Note: MMA is transitioning to Granola for meeting notes${RESET}"
-echo -e "  5) ${BOLD}Salesforce${RESET}    — CRM, member data (mainly Sales team)"
-echo -e "  6) ${BOLD}OpenAI${RESET}        — GPT models for comparison tasks"
-echo -e "  7) ${BOLD}Gemini${RESET}        — Google AI models"
-echo -e "  8) ${BOLD}ElevenLabs${RESET}    — Text-to-speech, audio generation"
-echo -e "  9) ${BOLD}Context7${RESET}      — Up-to-date library docs (technical users)"
-echo -e "  10) ${BOLD}Exa${RESET}          — Advanced web search (requires API key)"
+echo -e "  5) ${BOLD}Granola${RESET}       — AI meeting notes (recommended)"
+echo -e "  6) ${BOLD}Salesforce${RESET}    — CRM, member data (mainly Sales team)"
+echo -e "  7) ${BOLD}OpenAI${RESET}        — GPT models for comparison tasks"
+echo -e "  8) ${BOLD}Gemini${RESET}        — Google AI models"
+echo -e "  9) ${BOLD}ElevenLabs${RESET}    — Text-to-speech, audio generation"
+echo -e "  10) ${BOLD}Context7${RESET}     — Up-to-date library docs (technical users)"
+echo -e "  11) ${BOLD}Exa${RESET}          — Advanced web search (requires API key)"
 echo -e ""
-ask "Enter numbers to install (e.g., 4 5 7), or press Enter to skip: "
+ask "Enter numbers to install (e.g., 4 5 8), or press Enter to skip: "
 read OPTIONAL_CHOICES
 
 for choice in $OPTIONAL_CHOICES; do
@@ -437,6 +437,17 @@ for choice in $OPTIONAL_CHOICES; do
             fi
             ;;
         5)
+            info "Setting up Granola..."
+            if [ -f "$MAVEN_DIR/.marvin/integrations/granola/setup.sh" ]; then
+                bash "$MAVEN_DIR/.marvin/integrations/granola/setup.sh"
+            else
+                info "Granola connects via the claude.ai Granola connector."
+                info "In Claude Code, run: claude mcp add granola"
+                info "Or enable the Granola connector in claude.ai settings."
+                success "Granola noted — see instructions above"
+            fi
+            ;;
+        6)
             info "Setting up Salesforce..."
             if [ -f "$MAVEN_DIR/.marvin/integrations/salesforce/setup.sh" ]; then
                 bash "$MAVEN_DIR/.marvin/integrations/salesforce/setup.sh"
@@ -444,7 +455,7 @@ for choice in $OPTIONAL_CHOICES; do
                 warn "Salesforce setup not found. Ask Alec for help."
             fi
             ;;
-        6)
+        7)
             info "Setting up OpenAI..."
             ask "OpenAI API key: "
             read OPENAI_KEY
@@ -453,7 +464,7 @@ for choice in $OPTIONAL_CHOICES; do
                 success "OpenAI key saved to .env"
             fi
             ;;
-        7)
+        8)
             info "Setting up Gemini..."
             ask "Gemini API key: "
             read GEMINI_KEY
@@ -462,7 +473,7 @@ for choice in $OPTIONAL_CHOICES; do
                 success "Gemini key saved to .env"
             fi
             ;;
-        8)
+        9)
             info "Setting up ElevenLabs..."
             ask "ElevenLabs API key: "
             read ELEVENLABS_KEY
@@ -471,12 +482,12 @@ for choice in $OPTIONAL_CHOICES; do
                 success "ElevenLabs key saved to .env"
             fi
             ;;
-        9)
+        10)
             info "Context7 is available as an MCP server."
             info "It will be configured automatically if installed."
             success "Context7 noted — configure via 'claude mcp add'"
             ;;
-        10)
+        11)
             info "Setting up Exa..."
             ask "Exa API key (get one at exa.ai): "
             read EXA_KEY

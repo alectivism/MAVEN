@@ -155,6 +155,7 @@ Your personal files (profile, goals, session logs) are never overwritten — onl
 | Integration | What It Does |
 |-------------|--------------|
 | Fireflies | Meeting transcription |
+| Granola | AI meeting notes (recommended) |
 | Salesforce | CRM, membership, pipeline |
 | OpenAI | GPT models |
 | Gemini | Google AI models |
