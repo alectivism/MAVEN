@@ -2,7 +2,7 @@
 
 **MAVEN** = MMA's Agentic Virtual Executive Navigator
 
-An AI assistant for Marketing + Media Alliance staff, built on [Claude Code](https://claude.ai/code). MAVEN adds persistent session management — daily briefings, goal tracking, and continuity across conversations — on top of the [MMA Plugin](https://github.com/alectivism/mma-plugin), which provides all MMA skills and context automatically.
+An AI assistant for MMA staff, built on [Claude Code](https://claude.ai/code). MAVEN adds persistent session management — daily briefings, goal tracking, and continuity across conversations — on top of the [MMA Plugin](https://github.com/alectivism/mma-plugin), which provides all MMA skills and context automatically.
 
 > **Most staff don't need to install MAVEN.** The MMA Plugin is already pre-installed for all Claude users on our Team plan — you already have all MMA skills, brand guidelines, and organizational context in every Claude conversation. Install MAVEN only if you want the "AI Chief of Staff" experience: session memory, daily briefings, and goal tracking across conversations. MAVEN requires Claude Code (the terminal app).
 
