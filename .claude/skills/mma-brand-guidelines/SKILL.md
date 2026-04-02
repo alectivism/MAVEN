@@ -1,6 +1,6 @@
 ---
 name: mma-brand-guidelines
-description: MMA (Marketing + Media Alliance) brand guidelines reference. Use when creating branded content, documents, presentations, social media, or any visual/written materials for MMA. Enforces correct naming, colors, fonts, tone, and logo usage.
+description: MMA (Marketing + Media Alliance) brand guidelines reference. Use when creating branded content, documents, presentations, social media, or any visual/written materials for MMA. Also use when generating or formatting Word documents (.docx), PowerPoint presentations (.pptx), or any file output that should follow MMA brand standards. Enforces correct naming, colors, fonts, tone, logo usage, and document formatting.
 ---
 
 # MMA Brand Guidelines
@@ -205,3 +205,99 @@ All brand assets are in SharePoint:
 - Social/Ad Creative Guidelines: `MMA_JoinTheAlliance_Social and Ad Creative Guidelines.pptx`
 - Email Signature: `MMA Email Signature 2025.docx`
 - Letterhead: `MMA Letterhead.docx`
+
+---
+
+## Document Formatting (Word / .docx)
+
+When generating Word documents for MMA, apply these standards:
+
+### Fonts
+- **Headings:** Aptos Bold (substitute for Söhne Halbfett; Söhne is not available in Word)
+- **Body text:** Aptos 12pt (substitute for Söhne Licht)
+- **Pull quotes or serif distinction:** Georgia (substitute for Tiempos Text)
+- **Never** use Calibri, Times New Roman, Arial, or other off-brand fonts
+
+### Heading Hierarchy
+- **Title / Document name:** Aptos Bold, 24-28pt, black
+- **Heading 1:** Aptos Bold, 18-20pt, black
+- **Heading 2:** Aptos Bold, 14-16pt, black or MMA Gold (#FFA400)
+- **Heading 3:** Aptos Bold, 12pt, black
+- **Body text:** Aptos, 12pt, black
+- **Footnotes / captions:** Aptos, 10pt, grey
+
+### Layout
+- **Margins:** 1 inch all sides (standard)
+- **Line spacing:** 1.15 for body text, 1.0 for headings
+- **Paragraph spacing:** 6pt after paragraphs
+- **Page numbers:** Bottom right, Aptos 10pt
+
+### Accent Elements
+- Use MMA Gold (#FFA400) for accent lines, horizontal rules, or heading highlights
+- Use MMA Black (#000000) for primary text
+- Tables: header row in MMA Gold background with white text, alternating light grey rows
+- Avoid gradients on any brand element
+
+### Cover Page (when applicable)
+- Document title in Aptos Bold, 28-36pt
+- Subtitle or description in Aptos, 14-16pt
+- "Marketing + Media Alliance" or MMA logo
+- Date and author
+- MMA Gold accent bar or Diagonal element
+
+### General Rules
+- First mention of MMA: "Marketing + Media Alliance (MMA)"
+- Follow all naming rules from the Organization Name Rules section above
+- Include page numbers on multi-page documents
+- Use bullet points for lists of 3+ items
+- Bold key terms, lab names, and program acronyms on first mention
+
+---
+
+## Presentation Formatting (PowerPoint / .pptx)
+
+When generating PowerPoint presentations for MMA, apply these standards. If a .potx template is available, use it. Otherwise follow these rules:
+
+### Fonts
+- **Headlines / titles:** Söhne Halbfett (preferred) or Aptos Bold (substitute)
+- **Body text / bullets:** Söhne Leicht (preferred) or Aptos (substitute)
+- **Pull quotes / serif:** Tiempos Text (preferred) or Georgia (substitute)
+
+### Minimum Font Sizes (never go below)
+- Slide titles: 28pt minimum (prefer 32-40pt)
+- Subtitles: 18pt minimum (prefer 20-24pt)
+- Body text and bullets: 16pt minimum (prefer 18-20pt)
+- Table cell text: 14pt minimum (prefer 16pt)
+- Footnotes, tips, source citations: 12pt minimum
+- Never use anything below 12pt on any slide
+
+### Colors
+- Default slide background: white
+- Section dividers: MMA Gold (#FFA400) background with black text
+- Gold accent bars: #FFA400
+- Text: black on white backgrounds, white on dark/gold backgrounds
+- Think Tank slides: use the Think Tank's accent color (see Color Palette above)
+- Never use gradients on logo or brand elements
+- Ensure sufficient contrast at all times
+
+### Layout Rules
+- One idea per slide
+- Headlines should be takeaways, not topic labels ("CAP delivers +160% avg lift" not "CAP Results")
+- Limit bullet points to 5-6 per slide maximum
+- Vary slide layouts -- don't use the same layout for more than 3 consecutive slides
+- Two-column layouts: balance content between columns
+- Charts and diagrams: native PowerPoint objects (editable, not images)
+- Icons: simple line-style, consistent weight, in MMA Gold, black, or Think Tank accent color
+- Generous white space over dense, crowded slides
+
+### Section Dividers
+- Full MMA Gold (#FFA400) background
+- Black text
+- MMA logo in bottom-right (white version)
+- Use The Diagonal (gold slash) as brand accent on title and section slides
+
+### Tone (same as all MMA content)
+- Lead with conclusions, not build-ups
+- Active voice, specific numbers
+- No filler, hedging, or corporate jargon
+- Never use: "unlock", "unleash", "synergy", "leverage", "landscape", "delve", "game-changing", "cutting edge", "empower"

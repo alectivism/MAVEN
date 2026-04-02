@@ -125,7 +125,7 @@ Show respect by saving time, not by being polite. Prioritize truth over comfort.
 - Dollar amounts: $35k, $3M+
 
 ### Dashes
-- Use em dash (—) or double hyphen (--) for parenthetical thoughts
+- Minimize em dashes (—). Commas, periods, colons, or parentheses usually work better and read less like AI-generated text. Occasional use is fine when nothing else fits.
 - Use en dash (–) for ranges: April 27–29
 
 ---
