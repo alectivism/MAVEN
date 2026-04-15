@@ -10,38 +10,98 @@ An AI assistant for MMA staff, built on [Claude Code](https://claude.ai/code). M
 
 ## Installation
 
-### Step 1: Make sure you have Claude Code
+### Before you start
 
-Claude Code is the platform that powers MAVEN. If you haven't installed it yet:
+- **Claude subscription required.** Claude Code requires a paid Claude plan (Team, Pro, or Max). MMA staff are on a Team plan. If you haven't been added yet, Slack Alec Foster to get set up.
+- **Mac:** macOS 13 (Ventura) or later.
+- **Windows:** Windows 10 or later.
+
+---
+
+> **STOP — Mac users must read this before doing anything else.**
+>
+> Claude Code will **not install** until Apple's Command Line Tools are installed on your Mac. This is a one-time setup. Do Step 1 and Step 2 before touching anything else. If you skip this and go straight to installing Claude, it will fail silently or break partway through.
+
+---
+
+### Step 1: Open your terminal
+
+Your terminal is a text window where you type commands directly to your computer. You'll use it for all of the steps below.
 
 **Mac:**
-1. Open **Terminal** (press Cmd+Space, type "Terminal", press Enter)
-2. Paste this command and press Enter:
+Press **Cmd+Space**, type **Terminal**, and press **Enter**. A dark or white window will appear with a blinking cursor and a line ending in `%` or `$`. That's your prompt — it means the terminal is ready.
+
+**Windows:**
+Click the **Start menu**, search for **PowerShell**, right-click it, and choose **Run as Administrator**.
+
+> **How to paste and run commands:**
+> - Mac: **Cmd+V** to paste, then **Enter** to run
+> - Windows: Right-click to paste (or Ctrl+Shift+V), then **Enter** to run
+>
+> Run one command at a time. Wait for each one to finish before moving on.
+
+### Step 2: Install Apple's Command Line Tools (Mac only — required)
+
+This installs the underlying tools that Claude Code needs. **You cannot skip this step.** Paste the following command and press Enter:
+
+```
+xcode-select --install
+```
+
+**What will happen next:**
+
+- **A popup appears** saying "The 'xcode-select' command requires the command line developer tools. Would you like to install the tools now?" — click **Install**. Do not click Get Xcode. Wait for it to finish. This takes 2–15 minutes depending on your internet speed. You'll see "The software was installed" when it's done.
+
+- **You see: "command line tools are already installed"** — you're all set. Nothing to do. Move on to Step 3.
+
+- **No popup appears and the terminal just returns to the prompt** — run this to verify the tools are installed:
+  ```
+  git --version
+  ```
+  If you see something like `git version 2.x.x`, you're good. If you see "command not found," contact Alec in Slack before continuing.
+
+> Do not proceed to Step 3 until this step is complete.
+
+### Step 3: Install Claude Code
+
+Claude Code is the platform that powers MAVEN.
+
+**Mac:**
 ```
 curl -fsSL https://claude.ai/install.sh | bash
 ```
-3. Close and reopen Terminal
 
 **Windows:**
-1. Open **PowerShell** (search "PowerShell" in the Start menu)
-2. Paste this command and press Enter:
 ```
 irm https://claude.ai/install.ps1 | iex
 ```
-3. Close and reopen PowerShell
 
-Claude Code requires a Claude subscription (Team, Pro, or Max). MMA staff are on a Team plan — sign in with your MMA email when prompted. If you haven't been added to the Team plan yet, Slack Alec Foster to get set up.
+Wait for it to finish. You'll see a success message when it's done.
 
-### Step 2: Download MAVEN
+**Then close your terminal window completely and open a brand new one.** This is required — the terminal needs to reload before it will recognize the `claude` command.
 
-Paste this into your terminal and press Enter:
+> **After reopening, if you type `claude` and get "command not found":**
+> Paste this, press Enter, then close and reopen the terminal one more time:
+> ```
+> echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc && source ~/.zshrc
+> ```
+
+### Step 4: Sign in to Claude
+
+In your new terminal window, type:
+```
+claude
+```
+
+A browser window will open. Sign in with your **MMA email address**. Once you see a confirmation, switch back to the terminal. You only need to do this once.
+
+### Step 5: Download MAVEN
+
 ```
 git clone https://github.com/alectivism/MAVEN.git ~/maven
 ```
 
-> **First time using the terminal on Mac?** You may see a popup asking to install "Command Line Developer Tools." Click **Install** and wait for it to finish (a few minutes), then run the command above again.
-
-### Step 3: Run Setup
+### Step 6: Run setup
 
 ```
 cd ~/maven && ./.marvin/setup.sh
@@ -52,7 +112,7 @@ The setup wizard walks you through:
 - Connecting your tools (Outlook, Slack, Asana)
 - Optional extras (Salesforce, AI models, etc.)
 
-### Step 4: Start MAVEN
+### Step 7: Start MAVEN
 
 ```
 maven
