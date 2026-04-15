@@ -1,6 +1,6 @@
 ---
 name: mma-brand-guidelines
-description: MMA (Marketing + Media Alliance) brand guidelines reference. Use when creating branded content, documents, presentations, social media, or any visual/written materials for MMA. Also use when generating or formatting Word documents (.docx), PowerPoint presentations (.pptx), or any file output that should follow MMA brand standards. Enforces correct naming, colors, fonts, tone, logo usage, and document formatting.
+description: MMA (Marketing + Media Alliance) brand guidelines reference. Use when creating branded content, documents, social media, or any visual/written materials for MMA. Also use when generating or formatting Word documents (.docx) or any file output that should follow MMA brand standards. Enforces correct naming, colors, fonts, tone, logo usage, and document formatting. For PowerPoint (.pptx), use mma-pptx-builder instead.
 ---
 
 # MMA Brand Guidelines
@@ -60,7 +60,7 @@ SharePoint: MMAGlobal > Shared Documents > General > Marketing + Media Alliance 
 | Font | Weight | Usage | Leading | Tracking |
 |------|--------|-------|---------|----------|
 | **Söhne Halbfett** | Normal (bold weight) | Headlines, section headers, emphasis | +10% | 0 |
-| **Söhne Licht** | Regular (light weight) | Body text, subheads | +20% | 0 |
+| **Söhne Leicht** | Regular (light weight) | Body text, subheads | +20% | 0 |
 | **Tiempos Text** | Regular | Long-form body text, pull quotes, serif distinction | +20% | 0 |
 
 ### Substitute Fonts (when Söhne/Tiempos unavailable)
@@ -68,7 +68,7 @@ SharePoint: MMAGlobal > Shared Documents > General > Marketing + Media Alliance 
 | Primary | Substitute |
 |---------|-----------|
 | Söhne Halbfett | **Aptos Bold** |
-| Söhne Licht | **Aptos** (regular) |
+| Söhne Leicht | **Aptos** (regular) |
 | Tiempos Text | **Georgia** |
 
 Use substitutes on platforms that don't support custom font uploads (email, basic web, Office docs).
@@ -254,50 +254,4 @@ When generating Word documents for MMA, apply these standards:
 
 ---
 
-## Presentation Formatting (PowerPoint / .pptx)
-
-When generating PowerPoint presentations for MMA, apply these standards. If a .potx template is available, use it. Otherwise follow these rules:
-
-### Fonts
-- **Headlines / titles:** Söhne Halbfett (preferred) or Aptos Bold (substitute)
-- **Body text / bullets:** Söhne Leicht (preferred) or Aptos (substitute)
-- **Pull quotes / serif:** Tiempos Text (preferred) or Georgia (substitute)
-
-### Minimum Font Sizes (never go below)
-- Slide titles: 28pt minimum (prefer 32-40pt)
-- Subtitles: 18pt minimum (prefer 20-24pt)
-- Body text and bullets: 16pt minimum (prefer 18-20pt)
-- Table cell text: 14pt minimum (prefer 16pt)
-- Footnotes, tips, source citations: 12pt minimum
-- Never use anything below 12pt on any slide
-
-### Colors
-- Default slide background: white
-- Section dividers: MMA Gold (#FFA400) background with black text
-- Gold accent bars: #FFA400
-- Text: black on white backgrounds, white on dark/gold backgrounds
-- Think Tank slides: use the Think Tank's accent color (see Color Palette above)
-- Never use gradients on logo or brand elements
-- Ensure sufficient contrast at all times
-
-### Layout Rules
-- One idea per slide
-- Headlines should be takeaways, not topic labels ("CAP delivers +160% avg lift" not "CAP Results")
-- Limit bullet points to 5-6 per slide maximum
-- Vary slide layouts -- don't use the same layout for more than 3 consecutive slides
-- Two-column layouts: balance content between columns
-- Charts and diagrams: native PowerPoint objects (editable, not images)
-- Icons: simple line-style, consistent weight, in MMA Gold, black, or Think Tank accent color
-- Generous white space over dense, crowded slides
-
-### Section Dividers
-- Full MMA Gold (#FFA400) background
-- Black text
-- MMA logo in bottom-right (white version)
-- Use The Diagonal (gold slash) as brand accent on title and section slides
-
-### Tone (same as all MMA content)
-- Lead with conclusions, not build-ups
-- Active voice, specific numbers
-- No filler, hedging, or corporate jargon
-- Never use: "unlock", "unleash", "synergy", "leverage", "landscape", "delve", "game-changing", "cutting edge", "empower"
+> **For PowerPoint (.pptx) formatting rules,** see the **mma-pptx-builder** skill.
