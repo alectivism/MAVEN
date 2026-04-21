@@ -11,15 +11,36 @@ Generate slides that inherit MMA's real template structure, use the correct mast
 
 ---
 
-## 1. Template
+## 1. Template — Finding It
 
 Always start from the official MMA template. Never build from a blank Presentation().
 
-**Canonical template (as of April 2026):** `MMA Master PPT Template v2.1 GS.potx` (Greg Stuart's refresh). Identical masters/layouts/colors to the Dec 2025 template, minus one duplicate (`1_Title and Content Black Bullets`) that was removed from the Core Gold master.
+**Canonical template (as of April 2026):** `MMA PPT Template v2.1 2026.potx`. Identical masters/layouts/colors to the Dec 2025 template, minus one duplicate (`1_Title and Content Black Bullets`) that was removed from the Core Gold master.
 
-```python
-# Template source (local OneDrive path)
-# ~/Library/CloudStorage/OneDrive-MMAGlobal/.../MMA Master PPT Template v2.1 GS.potx
+### Template discovery — try in this order
+
+**Step 1 — Local project directory (Claude Code / Cowork only; skip on claude.ai).**
+Search the current working directory and common project subfolders for any file matching `MMA PPT Template*.potx` or `MMA_Template*.pptx`. If the user already has a local copy in the project, use that.
+
+```bash
+# Bash tool
+find . -maxdepth 4 -iname "MMA*Template*.potx" -o -iname "MMA_Template*.pptx" 2>/dev/null
+```
+
+**Step 2 — SharePoint via Microsoft connector / MCP.**
+Available to anyone with a MMA account. Most staff have at least read access.
+
+- File name: `MMA PPT Template v2.1 2026.potx`
+- Path: `MMA Internal > Documents > General > Marketing + Media Alliance MMA Brand Kit 2025`
+- Direct link (anyone with the link can view): https://mmaglobalcom.sharepoint.com/:p:/s/MMAGlobal/IQASzy8PH_6cTZVea1p9qoTTAUzphRo3ozdN8T_qyHznFW4?e=QploEn
+
+Use `mcp__claude_ai_Microsoft_365__sharepoint_search` or `mcp__ms365__search-onedrive-files` with the file name as the query. For most users this is the most reliable path.
+
+**Step 3 — Synced OneDrive app (Claude Code / Cowork only).**
+If the user has the OneDrive app on macOS and syncs the MMA Internal site, the file is at:
+
+```
+/Users/<username>/Library/CloudStorage/OneDrive-MMAGlobal/MMA Internal - Documents/General/Marketing + Media Alliance MMA Brand Kit 2025/MMA PPT Template v2.1 2026.potx
 ```
 
 ### POTX → PPTX one-time conversion
@@ -143,19 +164,31 @@ delete_unused_placeholders(slide)             # keep title + slide number only
 
 ## 4. Typography (PPTX-Specific Sizes)
 
+### The font size floor — read this first
+
+**14pt is the preferred minimum for all text on a slide. 12pt is the absolute floor.** Never go below 12pt. If 14pt doesn't fit, the slide has too much content — cut words, don't shrink type.
+
+This applies to *everything*: card body copy, kicker labels, contact strips, footer source lines, tag badges, status tags, mini-card descriptions. 10pt and 11pt are not acceptable for any user-facing text, ever.
+
+### Size table
+
 | Element | Font | Size | Notes |
 |---------|------|------|-------|
 | **Slide title (content slides)** | **Söhne Halbfett** | **36pt default** | 32pt only if it would otherwise wrap to 2 lines. If 32pt still wraps, the title is too long — rewrite it. |
-| Subtitle | Söhne Leicht | 18–20pt | Gray (`#666666`). Use the layout's native subtitle placeholder when one exists. |
 | Title slide title | Söhne Halbfett | 44–54pt | Usually the template's default size on `Title Slide` layout — leave it unless you're certain. |
 | Section header title | Söhne Halbfett | 60pt | |
-| Body / bullets | Söhne Leicht | 16–20pt (16pt min) | |
-| Card titles | Söhne Halbfett | 18–20pt | |
-| Table text | Söhne Leicht | 14–16pt (14pt min) | Headers in Halbfett. |
-| Footnotes / source lines | Söhne Leicht | 12pt min | Never below 12pt. |
+| Subtitle | Söhne Leicht | 18–20pt | Gray (`#666666`). Use the layout's native subtitle placeholder when one exists. |
+| Body / bullets | Söhne Leicht | 16–20pt | |
+| Card titles | Söhne Halbfett | 18–22pt | |
+| Card body | Söhne Leicht | 14–16pt | |
+| Kicker labels / eyebrow text | Söhne Halbfett | 14pt | Uppercase, accent color. |
+| Table text | Söhne Leicht | 14–16pt | Headers in Halbfett. |
+| Footnotes / source lines | Söhne Leicht | **14pt preferred, 12pt absolute min** | Never below 12pt. |
 | Callout labels | Söhne Halbfett | 16pt | Accent color, inline with body. |
 
 **Default to 36pt for content slide titles.** 28pt is too small — it's a sign the title is being auto-shrunk to fit a cluttered slide. Fix the slide, not the font.
+
+**If you find yourself wanting to use 10pt or 11pt:** the answer is always to remove content from the slide, not shrink the type. Split into two slides, drop a column, or cut the optional detail. Never make small text smaller.
 
 Leading: +10% for headlines, +20% for body. Tracking: 0.
 
@@ -620,6 +653,7 @@ def set_slide_number(slide, num):
 | **Never freelance title slide text positions** | Use the layout's native title / subtitle placeholders (see §5). |
 | **Never shrink content slide titles below 32pt** | 36pt default. 32pt only if wrapping would otherwise occur. Below that, the title is too long — rewrite it. |
 | **Never mix Core Gold dividers into a think tank deck** | Use the think tank master's `2_Title Slide` as a divider (§7). |
+| **Never set text below 12pt** | 14pt preferred, 12pt absolute floor. If content won't fit, cut content — don't shrink type (§4). |
 
 ---
 
