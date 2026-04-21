@@ -1,6 +1,6 @@
 ---
 name: mma-pptx-builder
-description: Generates PowerPoint decks, presentations, and slides for MMA using the official template, correct slide masters, and approved shape patterns. Use when creating, modifying, or rebuilding .pptx files, decks, presentations, or slides for MMA. Also use when asked to "make a deck", "build a presentation", "create slides", "generate a PowerPoint", or any PPTX/PPT task. Covers template workflow, master selection, shape construction (accent bar cards, callouts, tables, flow diagrams), and python-pptx implementation patterns.
+description: Generates, edits, or modifies PowerPoint decks, presentations, and slides for MMA using the official template, correct slide masters, and approved shape patterns. Use for ANY PowerPoint task — creating new decks, editing existing slides, modifying shapes, updating text, recoloring, repositioning, fixing layouts, or any change to a .pptx file. Also use when asked to "make a deck", "build a presentation", "create slides", "generate a PowerPoint", "edit a slide", "fix this slide", "update the deck", "change the title", or any PPTX/PPT task, no matter how small. Covers template workflow, master selection, shape construction (accent bar cards, callouts, tables, flow diagrams), and python-pptx implementation patterns.
 ---
 
 # MMA PowerPoint Builder
@@ -11,21 +11,93 @@ Generate slides that inherit MMA's real template structure, use the correct mast
 
 ---
 
-## 1. Template
+## 1. Template — Finding It
 
 Always start from the official MMA template. Never build from a blank Presentation().
 
-```python
-# Template location (local copy in project directory)
-prs = Presentation('MMA_Template.pptx')
+**Canonical template (as of April 2026):** `MMA_PPT_Template_v2.1_2026.pptx` — 6 slide masters (Core Gold + 4 think tanks + Charts and Tables). Pre-converted from the POTX source so python-pptx opens it directly.
 
-# Original source:
-# ~/Library/CloudStorage/OneDrive-MMAGlobal/.../MMA PPT Template Dec 2025.potx
-# Convert POTX to PPTX: unzip, change content type from
-# presentationml.template.main+xml to presentationml.presentation.main+xml, rezip
+### Template discovery — try in this order
+
+**Step 1 — Local project directory (Claude Code / Cowork only; skip on claude.ai).**
+
+```bash
+find . -maxdepth 4 -iname "MMA*Template*.pptx" -o -iname "MMA*Template*.potx" 2>/dev/null
 ```
 
-The template provides correct slide masters, title positions, MMA logo placement, slide numbers, and footer positions. New slides added manually later will inherit real masters.
+If you cloned the MAVEN repo, the template also lives at `templates/MMA_PPT_Template_v2.1_2026.pptx` within that repo.
+
+**Step 2 — Public download waterfall (primary for claude.ai and any environment without SharePoint binary access).**
+
+The MS 365 / SharePoint connector in claude.ai **cannot return the binary** of a .pptx file — it only extracts text. Use the public download waterfall instead. Try each in order; stop at the first success.
+
+Download destination: `/tmp/MMA_Template.pptx` (claude.ai) or `./MMA_Template.pptx` (Claude Code).
+
+**Option A — GitHub raw (primary, public MAVEN repo):**
+```bash
+curl -L -o MMA_Template.pptx "https://raw.githubusercontent.com/alectivism/MAVEN/main/templates/MMA_PPT_Template_v2.1_2026.pptx"
+```
+
+**Option B — Dropbox (fallback):**
+```bash
+curl -L -o MMA_Template.pptx "https://www.dropbox.com/scl/fi/9ik7pgiwxzxh3bbo50sbk/MMA-PPT-Template-v2.1-2026.pptx?rlkey=w9ldavfftrs2246h9x914xtyx&dl=1"
+```
+`&dl=1` (not `&dl=0`) forces a direct binary download.
+
+**Option C — Google Drive (last resort):**
+```bash
+curl -L -o MMA_Template.pptx "https://drive.google.com/uc?export=download&id=1KahihBYQ7AO9KpkeC__KP8afcHBg2Wa4"
+```
+
+**In claude.ai (no bash), use the Python tool:**
+```python
+import urllib.request
+urllib.request.urlretrieve(
+    "https://raw.githubusercontent.com/alectivism/MAVEN/main/templates/MMA_PPT_Template_v2.1_2026.pptx",
+    "/tmp/MMA_Template.pptx",
+)
+```
+
+**Verify the download is a real PPTX, not an HTML error page:**
+```python
+from pptx import Presentation
+prs = Presentation("/tmp/MMA_Template.pptx")
+assert len(prs.slide_masters) == 6, "Wrong template — should have 6 masters"
+```
+If this fails, delete the file and fall through to the next option.
+
+**Step 3 — SharePoint via Microsoft connector (locates but CANNOT return binary).**
+Use only to confirm version or find a newer template — not to build from. File name: `MMA PPT Template v2.1 2026.potx`. Path: `MMA Internal > Documents > General > Marketing + Media Alliance MMA Brand Kit 2025`.
+
+**Step 4 — Synced OneDrive app (Claude Code / Cowork only, macOS).**
+```
+/Users/<username>/Library/CloudStorage/OneDrive-MMAGlobal/MMA Internal - Documents/General/Marketing + Media Alliance MMA Brand Kit 2025/MMA PPT Template v2.1 2026.potx
+```
+
+### POTX → PPTX conversion (legacy — usually not needed)
+
+The public download waterfall serves a pre-converted `.pptx` directly, so most runs skip this. Only needed if starting from a raw `.potx`. python-pptx cannot open `.potx` — throws `ValueError: not a PowerPoint file`. Patch the content type:
+
+```python
+import zipfile
+
+def potx_to_pptx(src_potx, dst_pptx):
+    with zipfile.ZipFile(src_potx, "r") as zin, \
+         zipfile.ZipFile(dst_pptx, "w", zipfile.ZIP_DEFLATED) as zout:
+        for item in zin.infolist():
+            data = zin.read(item.filename)
+            if item.filename == "[Content_Types].xml":
+                data = data.replace(
+                    b"presentationml.template.main+xml",
+                    b"presentationml.presentation.main+xml",
+                )
+            zout.writestr(item, data)
+
+from pptx import Presentation
+prs = Presentation("MMA_Template.pptx")
+```
+
+New slides inherit the real masters, logo placement, slide numbers, and footer positions.
 
 ---
 
