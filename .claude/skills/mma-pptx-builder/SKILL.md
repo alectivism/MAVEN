@@ -177,7 +177,7 @@ This applies to *everything*: card body copy, kicker labels, contact strips, foo
 | **Slide title (content slides)** | **Söhne Halbfett** | **36pt default** | 32pt only if it would otherwise wrap to 2 lines. If 32pt still wraps, the title is too long — rewrite it. |
 | Title slide title | Söhne Halbfett | 44–54pt | Usually the template's default size on `Title Slide` layout — leave it unless you're certain. |
 | Section header title | Söhne Halbfett | 60pt | |
-| Subtitle | Söhne Leicht | 18–20pt | Gray (`#666666`). Use the layout's native subtitle placeholder when one exists. |
+| Subtitle | Söhne Leicht | 18–20pt | Gray (`#666666`). **Put subtitle in the SAME text box as the title** (second paragraph) so alignment stays locked — see below. |
 | Body / bullets | Söhne Leicht | 16–20pt | |
 | Card titles | Söhne Halbfett | 18–22pt | |
 | Card body | Söhne Leicht | 14–16pt | |
@@ -191,6 +191,40 @@ This applies to *everything*: card body copy, kicker labels, contact strips, foo
 **If you find yourself wanting to use 10pt or 11pt:** the answer is always to remove content from the slide, not shrink the type. Split into two slides, drop a column, or cut the optional detail. Never make small text smaller.
 
 Leading: +10% for headlines, +20% for body. Tracking: 0.
+
+### Title + subtitle live in ONE text box
+
+Content slide subtitles (the smaller gray line under the title) **must be written as the second paragraph of the title placeholder**, not as a separate text box. A separate text box drifts out of alignment with the title — different left edge, different vertical rhythm. Same text frame = always aligned.
+
+```python
+def set_title_with_subtitle(slide, title_text, subtitle_text=None,
+                            title_size=36, subtitle_size=18):
+    for ph in slide.placeholders:
+        if ph.placeholder_format.idx == 0:
+            tf = ph.text_frame
+            tf.clear()
+            # Paragraph 1 — title
+            p1 = tf.paragraphs[0]
+            r1 = p1.add_run()
+            r1.text = title_text
+            r1.font.name = "Söhne Halbfett"
+            r1.font.size = Pt(title_size)
+            r1.font.bold = True
+            r1.font.color.rgb = BLACK
+            # Paragraph 2 — subtitle (same text frame)
+            if subtitle_text:
+                p2 = tf.add_paragraph()
+                p2.space_before = Pt(4)
+                r2 = p2.add_run()
+                r2.text = subtitle_text
+                r2.font.name = "Söhne Leicht"
+                r2.font.size = Pt(subtitle_size)
+                r2.font.bold = False
+                r2.font.color.rgb = MED_GRAY
+            return
+```
+
+This applies only to content slides. Title slides (`1_Title Slide` / `Title Slide`) have dedicated title + subtitle *placeholders* — use those native placeholders, not a single-textbox pattern (see §5).
 
 ---
 
@@ -654,6 +688,7 @@ def set_slide_number(slide, num):
 | **Never shrink content slide titles below 32pt** | 36pt default. 32pt only if wrapping would otherwise occur. Below that, the title is too long — rewrite it. |
 | **Never mix Core Gold dividers into a think tank deck** | Use the think tank master's `2_Title Slide` as a divider (§7). |
 | **Never set text below 12pt** | 14pt preferred, 12pt absolute floor. If content won't fit, cut content — don't shrink type (§4). |
+| **Never put content-slide subtitle in a separate text box** | Second paragraph of the title placeholder, same text frame. Separate boxes drift out of alignment (§4). |
 
 ---
 
