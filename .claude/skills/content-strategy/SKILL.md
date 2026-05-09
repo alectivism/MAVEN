@@ -1,6 +1,6 @@
 ---
 name: content-strategy
-description: Develop content strategies for MMA programs, think tanks, labs, events, and initiatives — editorial calendars, content pillars, distribution plans, and audience targeting. Use when asked to "create a content strategy", "plan content", "editorial calendar", "content plan", "what should we write about", or any strategic content planning task.
+description: MMA content strategy — editorial calendars, pillars, distribution, audience targeting. For drafting individual pieces, use content-draft.
 ---
 
 # Content Strategy — MMA Standards

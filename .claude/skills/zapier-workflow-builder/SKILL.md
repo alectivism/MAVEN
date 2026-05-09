@@ -1,6 +1,6 @@
 ---
 name: zapier-workflow-builder
-description: Guide MMA staff through building effective Zapier workflows (Zaps). Use when asked to "build a Zap", "create a Zapier workflow", "automate with Zapier", "set up a Zap", "Zapier help", "workflow automation", or any task involving Zapier workflow design, troubleshooting, or optimization. Also use when a user describes an automation need that Zapier could solve, even if they don't mention Zapier by name.
+description: Design Zapier workflows (Zaps) for MMA staff — architecture, troubleshooting, Copilot prompts. Use for "build a Zap", "Zapier help", or any automation Zapier could solve.
 ---
 
 # Zapier Workflow Builder

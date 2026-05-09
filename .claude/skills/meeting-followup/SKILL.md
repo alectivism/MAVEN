@@ -1,6 +1,6 @@
 ---
 name: meeting-followup
-description: Generate segmented follow-up emails after meetings. Use when asked to "write follow-up", "meeting follow-up", "send follow-up emails", "post-meeting emails", or when a meeting transcript or notes are provided and follow-up communications are needed.
+description: Segmented follow-up emails after meetings. Use for "meeting follow-up" or when a transcript/notes are provided.
 ---
 
 # Meeting Follow-Up Email Generator

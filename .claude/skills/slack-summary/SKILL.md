@@ -1,6 +1,6 @@
 ---
 name: slack-summary
-description: Summarize activity in MMA Slack channels — key decisions, action items, and important discussions. Use when asked to "summarize Slack", "what happened in #channel", "Slack recap", "catch me up on", or any Slack channel summary request.
+description: Summarize MMA Slack channel activity — decisions, action items, discussions. Use for "summarize Slack", "Slack recap", "catch me up on".
 ---
 
 # Slack Channel Summary

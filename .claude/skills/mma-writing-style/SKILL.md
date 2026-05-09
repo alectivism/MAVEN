@@ -1,6 +1,6 @@
 ---
 name: mma-writing-style
-description: MMA writing style and communication standards. Use when drafting any content for MMA -- emails, reports, presentations, social posts, member communications, research summaries, or internal documents. Enforces tone, voice, naming conventions, and formatting standards.
+description: MMA writing standards — tone, voice, naming, formatting. Use when drafting any MMA content (emails, reports, posts, summaries, internal docs).
 ---
 
 # MMA Writing Style Guide

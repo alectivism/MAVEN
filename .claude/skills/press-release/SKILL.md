@@ -1,6 +1,6 @@
 ---
 name: press-release
-description: Write wire-ready press releases in MMA's brand voice for research reports, lab results, partnerships, events, and announcements. Use when asked to "write a press release", "draft a PR", "announce research", "draft a release", or any press release task.
+description: Wire-ready press releases in MMA voice for research, lab results, partnerships, events, announcements.
 ---
 
 # Press Release — MMA Standards

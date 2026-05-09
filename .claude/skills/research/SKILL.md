@@ -1,6 +1,6 @@
 ---
 name: research
-description: Conduct web research on a topic and deliver structured findings. Use when asked to "research", "look into", "find out about", "investigate", "what's happening with", or any research or information gathering task.
+description: Web research with structured findings. Use for "research", "investigate", "look into", "find out about".
 ---
 
 # Research Skill

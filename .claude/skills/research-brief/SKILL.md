@@ -1,6 +1,6 @@
 ---
 name: research-brief
-description: Format MMA research findings into structured briefs for different audiences — think tank updates, board reports, member communications, or public-facing summaries. Use when asked to "brief on research", "format findings", "research update", "think tank brief", "summarize MATT results", "MOSTT update", "DATT findings", or any think tank research formatting task.
+description: Format MMA research findings into briefs (think tank, board, member, public). Use for "think tank brief", "research update", or MATT/MOSTT/DATT/ALTT summaries.
 ---
 
 # Research Brief Generator — MMA Think Tanks

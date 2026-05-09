@@ -1,6 +1,6 @@
 ---
 name: mma-pptx-builder
-description: Generates, edits, or modifies PowerPoint decks, presentations, and slides for MMA using the official template, correct slide masters, and approved shape patterns. Use for ANY PowerPoint task — creating new decks, editing existing slides, modifying shapes, updating text, recoloring, repositioning, fixing layouts, or any change to a .pptx file. Also use when asked to "make a deck", "build a presentation", "create slides", "generate a PowerPoint", "edit a slide", "fix this slide", "update the deck", "change the title", or any PPTX/PPT task, no matter how small. Covers template workflow, master selection, shape construction (accent bar cards, callouts, tables, flow diagrams), and python-pptx implementation patterns.
+description: Generate or edit MMA PowerPoint decks — official template, slide masters, approved shapes (accent cards, callouts, tables, flow diagrams), python-pptx patterns. Use for ANY .pptx task: new decks, slide edits, recolors, layout fixes, text changes.
 ---
 
 # MMA PowerPoint Builder

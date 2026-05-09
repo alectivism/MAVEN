@@ -1,6 +1,6 @@
 ---
 name: briefing-prep
-description: Prepare for upcoming meetings by gathering attendee info, past interactions, agenda context, and talking points. Use when asked to "prep for a meeting", "brief me on", "prepare for", "get ready for a call with", "meeting prep", or any pre-meeting preparation task.
+description: Meeting prep — attendee info, past interactions, agenda, talking points. Use for "prep for", "brief me on", "meeting prep".
 ---
 
 # Meeting Preparation

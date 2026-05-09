@@ -1,6 +1,6 @@
 ---
 name: lab-summary
-description: Summarize MMA Future Lab results for different audiences — executive summaries, member briefs, marketing materials, or detailed research summaries. Use when asked to "summarize lab results", "write up CAP results", "lab summary", "Future Lab brief", "summarize experiment", or any task involving MMA lab research summaries.
+description: Summarize MMA Future Lab results (CAP, A3, ACE, SIFT, AURA, ARC) for execs, members, marketing, or detail. Use for "lab summary", "Future Lab brief".
 ---
 
 # Future Lab Summary Generator

@@ -1,6 +1,6 @@
 ---
 name: event-promo
-description: Create promotional content for MMA events — POSSIBLE, CMO Summit, SMARTIES, CATS, AIPOSSIBLE, and other MMA events. Use when asked to "promote an event", "write event copy", "create event materials", "draft invitation", "event marketing", or any event promotion task.
+description: Promotional content for MMA events (POSSIBLE, CMO Summit, SMARTIES, CATS, AIPOSSIBLE) — copy, invitations, marketing materials.
 ---
 
 # Event Promotion — MMA Events

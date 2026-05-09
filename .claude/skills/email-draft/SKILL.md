@@ -1,6 +1,6 @@
 ---
 name: email-draft
-description: Draft professional emails in MMA's brand voice and formatting standards. Use when asked to "write an email", "draft a message", "compose an email", "reply to", "follow up with", or any email-related writing task.
+description: Draft emails in MMA brand voice. Use for "write an email", "draft a message", "reply to", "follow up with".
 ---
 
 # Email Drafting — MMA Style

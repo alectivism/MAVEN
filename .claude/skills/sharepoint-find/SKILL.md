@@ -1,6 +1,6 @@
 ---
 name: sharepoint-find
-description: Navigate and find documents across MMA's SharePoint sites. Use when asked to "find on SharePoint", "where is the document", "look up in SharePoint", "find the file", "SharePoint search", or any document/file finding task on SharePoint.
+description: Find documents in MMA SharePoint. Use for "find on SharePoint", "where is the document", "find the file".
 ---
 
 # SharePoint Navigation — MMA

@@ -1,6 +1,6 @@
 ---
 name: member-comms
-description: Draft member-facing communications for MMA — onboarding emails, renewal outreach, engagement campaigns, benefit summaries, and member updates. Use when asked to "write to members", "member communication", "onboarding email", "renewal", "member engagement", or any member-related communication task.
+description: MMA member communications — onboarding, renewals, engagement, benefit summaries, member updates.
 ---
 
 # Member Communications — MMA Standards

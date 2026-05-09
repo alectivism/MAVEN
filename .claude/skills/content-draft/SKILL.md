@@ -1,6 +1,6 @@
 ---
 name: content-draft
-description: Create marketing content in MMA's brand voice — blog posts, newsletter articles, thought leadership pieces, web copy, one-pagers, and marketing collateral. Use when asked to "write a blog post", "draft content", "create an article", "write copy", "draft a one-pager", or any content creation task.
+description: Marketing content in MMA voice — blog posts, newsletter articles, thought leadership, web copy, one-pagers.
 ---
 
 # Content Creation — MMA Standards

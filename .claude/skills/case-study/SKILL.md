@@ -1,6 +1,6 @@
 ---
 name: case-study
-description: Draft case studies from MMA lab results, member experiences, or program outcomes. Use when asked to "write a case study", "create a case study", "draft a success story", "member case study", "lab case study", or any case study creation task.
+description: Case studies from MMA lab results, member experiences, or program outcomes.
 ---
 
 # Case Study Generator — MMA

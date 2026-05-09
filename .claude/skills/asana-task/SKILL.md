@@ -1,6 +1,6 @@
 ---
 name: asana-task
-description: Create, update, and manage Asana tasks and projects for MMA workflows. Use when asked to "create a task", "add to Asana", "update the task", "check Asana", "assign to", or any Asana task management request.
+description: Create, update, or manage Asana tasks and projects for MMA. Use for "add to Asana", "create a task", "assign to", "check Asana".
 ---
 
 # Asana Task Management — MMA

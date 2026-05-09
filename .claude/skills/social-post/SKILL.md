@@ -1,6 +1,6 @@
 ---
 name: social-post
-description: Create social media posts for MMA channels, primarily LinkedIn. Use when asked to "write a social post", "create a LinkedIn post", "draft social content", "promote on social", or any social media content task.
+description: Social posts for MMA channels (primarily LinkedIn). Use for "LinkedIn post", "social content", "promote on social".
 ---
 
 # Social Media Content — MMA Standards

@@ -1,6 +1,6 @@
 ---
 name: mma-brand-guidelines
-description: MMA (Marketing + Media Alliance) brand guidelines reference. Use when creating branded content, documents, social media, or any visual/written materials for MMA. Also use when generating or formatting Word documents (.docx) or any file output that should follow MMA brand standards. Enforces correct naming, colors, fonts, tone, logo usage, and document formatting. For PowerPoint (.pptx), use mma-pptx-builder instead.
+description: MMA brand reference — naming, colors, fonts, tone, logo, .docx formatting. Use when creating branded content or Word docs. For .pptx, use mma-pptx-builder.
 ---
 
 # MMA Brand Guidelines

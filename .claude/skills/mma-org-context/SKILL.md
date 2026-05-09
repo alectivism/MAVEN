@@ -1,6 +1,6 @@
 ---
 name: mma-org-context
-description: MMA organizational context -- org structure, teams, think tanks, labs, events, research, strategic priorities, membership, and tools. Use when answering questions about MMA, referencing staff or departments, describing programs or labs, writing about MMA events, or needing any organizational context about Marketing + Media Alliance.
+description: MMA org context — structure, teams, think tanks, labs, events, research, membership, SharePoint, Slack, tools. Use when referencing MMA staff, departments, programs, or events.
 ---
 
 # MMA Organization Context

@@ -1,6 +1,6 @@
 ---
 name: launch-strategy
-description: Plan and execute launches for MMA programs, research, labs, events, and initiatives — project scoping, stakeholder alignment, phased rollout, and go-to-market planning. Use when asked to "plan a launch", "create a launch plan", "go-to-market strategy", "project kickoff", "rollout plan", "launch this program", or any launch planning task.
+description: Plan launches for MMA programs, research, labs, events — scoping, stakeholders, phased rollout, GTM. Use for "plan a launch", "rollout plan", "go-to-market".
 ---
 
 # Launch Strategy — MMA Standards
